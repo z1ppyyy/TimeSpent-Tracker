@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles.css')}}">
+</head>
+<body>
+    <header>
+        <h1 class="center-heading">Time Spent Tracker</h1>
+    </header>
+
+    <main class="container">
+        <section class="form-section">
+        <form method="post" action="/tracker">
+            <div class="form-group row">
+                <label for="usernmae" class="col-sm-3 col-form-label">Enter your Telegram Name</label>
+                <div class="col-sm-9">
+                    <input autocomplete="off" autofocus type="text" class="form-control" id="username" name="username">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="month" class="col-sm-3 col-form-label">Choose the Month</label>
+                <div class="col-sm-9">
+                <select id="month" class="form-control" name="month">
+                    <option value="january">January</option>
+                    <option value="february">February</option>
+                    <option value="march">March</option>
+                    <option value="april">April</option>
+                    <option value="may">May</option>
+                    <option value="june">June</option>
+                    <option value="july">July</option>
+                    <option value="august">August</option>
+                    <option value="september">September</option>
+                    <option value="october">October</option>
+                    <option value="novermber">Novermber</option>
+                    <option value="december">December</option>
+                </select>
+            </div>
+        </div>
+
+            <div class="form-group row">
+                <div class="col-sm-12 text-center">
+                    <button type="submit" class="btn btn--primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        </section>
+
+        <section id="responses" class="mt-5">
+            {% if result %}
+                <h2 class="form-label">{{ result }}</h2>
+            {% endif %}
+
+            {% if error %}
+                <h2 class="form-label text-danger">{{ error }}</h2>
+            {% endif %}
+        </section>
+    </main>
+</body>
+</html>

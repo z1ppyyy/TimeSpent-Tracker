@@ -1,0 +1,4 @@
+__pycache__/
+env/
+session_name*
+*.pyc
