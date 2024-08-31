@@ -13,7 +13,7 @@
 
 ## Features
 
-The **Time Spent Tracker** is a Python-based application built with Flask. It tracks the amount of time users spend on specific tasks in the Progress Telegram Channel. The tracker allows users to specify a username and a month, then it will calculate the total time spent by the user during that month.
+The **Time Spent Tracker** is a Python-based application built with Flask. It tracks the amount of time users spend on programming in the Progress Telegram Channel. The tracker allows users to specify a username and a month, then it will calculate the total time spent by the user during that month.
 
 ## Requirements
 
@@ -57,7 +57,7 @@ Then, open your browser and go to http://127.0.0.1:5000/ to use the tracker.
 ### 4. Input
 Enter your Telegram name in the input field.
 Select the month you want to track.
-Click the "Track Time" button to get the total time spent.
+Click the "Submit" button to get the total time spent.
 Contributing
 Contributions are welcome! Feel free to submit a Pull Request or open an Issue.
 
